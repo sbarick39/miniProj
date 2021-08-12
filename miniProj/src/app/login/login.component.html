@@ -1,0 +1,29 @@
+<div id="login">
+    <div class="row pt-5">
+        <div class="col-md-6 mx-auto">
+       <div class="card rounded-0">
+           <div class="card-header">
+               <h3 class="register mb-0"> LogIn</h3>
+           </div>
+           <div class="card-body">
+               <form class="form" #myForm="ngForm">
+                   <div class="form-group">
+                       <label>Email</label>
+                       <input type="text" class="form-control rounded-0" required [(ngModel)]="loginuserData.Email" name="email">
+                   </div>
+                   <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control rounded-0" required [(ngModel)]="loginuserData.Password" name="password" >
+                   </div>
+                   <div>
+                       <button type="button" class="btn btn-primary float-right" (click)="loginUser()" [disabled]="!myForm.form.valid">logIn</button>
+                   </div>
+               </form>
+               
+           </div>
+       </div>
+        </div>
+       
+    </div>
+</div>
+

@@ -1,0 +1,46 @@
+<div class="row pt-5">
+    <div class="col-md-6 mx-auto">
+   <div class="card rounded-0">
+       <div class="card-header">
+           <h3 class="register mb-0"> Register</h3>
+       </div>
+       <div class="card-body">
+           <form class="form" #myForm="ngForm">
+
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control rounded-0" required [(ngModel)]="registeruserData.Name" name="name">
+            </div>
+            <div class="form-group">
+                <label>Phone</label>
+                <input type="text" class="form-control rounded-0" required [(ngModel)]="registeruserData.Phone" name="Phone">
+            </div>
+            <div class="form-group">
+                <label>ZipCode</label>
+                <input type="text" class="form-control rounded-0" required [(ngModel)]="registeruserData.Zipcode" name="ZipCode">
+            </div>
+               <div class="form-group">
+                   <label>Email</label>
+                   <input type="text" class="form-control rounded-0" required [(ngModel)]="registeruserData.Email" name="email">
+               </div>
+               <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control rounded-0" required [(ngModel)]="registeruserData.Password" name="password" >
+               </div>
+               <div>
+                   <button type="button" class="btn btn-primary float-right" (click)="registerUser()" [disabled]="!myForm.form.valid">Register</button>
+               </div>
+               <span>{{emails}}<br>
+                    {{passwords}}</span>
+           </form>
+       </div>
+   </div>
+    </div>
+</div>
+<!-- <ng-http-loader [backdrop]="false"
+[backgroundColor]="'#ff0000'"
+[debounceDelay]="100"
+[extraDuration]="300"
+[minDuration]="300"
+[opacity]=".6"
+[spinner]="spinkit.skWave"></ng-http-loader> -->

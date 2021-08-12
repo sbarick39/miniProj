@@ -1,0 +1,19 @@
+<div class="row mt-5">
+    <div class="col-md12">
+        <div class=" card-deck">
+            <div class="card" *ngFor="let std of stdRecorddata">
+                <div class=" card-header"> {{std.id}}</div>
+                <div class=" card-body">
+                    {{std.name}}
+    
+                    <br>
+                   <img [src]="std.image">
+                </div>
+                <div class=" card-footer bg-success text-white">
+                    {{std.desc}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

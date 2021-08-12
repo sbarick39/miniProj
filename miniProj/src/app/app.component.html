@@ -1,0 +1,27 @@
+<div class="body">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#"></a>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" routerLink='/students' routerLinkActive="active">Students</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" routerLink='/studentsRecord' routerLinkActive="active">Students Record</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <a class="nav-link"routerLink="/login" routerLinkActive="active" *ngIf="!auth.logedIn()">Login</a>
+          <a class="nav-link"routerLink="/register" routerLinkActive="active"  *ngIf="!auth.logedIn()">register</a>
+          <a class="nav-link"  *ngIf="auth.logedIn()" (click)="auth.logout()" style="cursor: pointer;">Log Out</a>
+          
+        </ul>
+      </div>
+</nav>
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
+</div>
+
+
